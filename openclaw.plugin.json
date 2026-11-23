@@ -1,0 +1,42 @@
+{
+  "id": "0g-pc",
+  "name": "0G Private Computer",
+  "description": "0G Private Computer model provider: every chat model 0G's router serves, through one API key",
+  "version": "0.1.0",
+  "categories": [
+    "models"
+  ],
+  "providers": [
+    "0g"
+  ],
+  "setup": {
+    "providers": [
+      {
+        "id": "0g",
+        "envVars": [
+          "OG_API_KEY"
+        ]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "0g",
+      "method": "api-key",
+      "choiceId": "0g-api-key",
+      "choiceLabel": "0G Private Computer API key",
+      "choiceHint": "One API key for open and frontier models",
+      "groupId": "0g",
+      "groupLabel": "0G Private Computer",
+      "optionKey": "ogApiKey",
+      "cliFlag": "--og-api-key",
+      "cliOption": "--og-api-key <key>",
+      "cliDescription": "0G Private Computer API key"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

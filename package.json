@@ -1,0 +1,48 @@
+{
+  "name": "openclaw-0g-pc",
+  "version": "0.1.0",
+  "description": "OpenClaw provider for 0G Private Computer: every chat model 0G's router serves",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragon888code/openclaw-0g-provider.git"
+  },
+  "files": [
+    "index.js",
+    "models.js",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test models.test.js"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.11.7"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "providers": [
+      "0g"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.11.7"
+    },
+    "build": {
+      "openclawVersion": "2026.11.7"
+    },
+    "install": {
+      "clawhubSpec": "clawhub:openclaw-0g-pc",
+      "defaultChoice": "clawhub",
+      "minHostVersion": ">=2026.11.7"
+    }
+  }
+}
