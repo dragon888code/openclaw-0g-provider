@@ -24,6 +24,17 @@ async function fetchModels(signal) {
 	return toModels(body.data);
 }
 
+// Catalog headers reach only the /models fetch, not chat requests (OpenClaw's OpenAI client sends
+// those), so the attribution headers are added to every stream here, as OpenClaw's own Requesty
+// plugin does. Ours win over a caller's; any other header passes through.
+function withAttribution(ctx) {
+	if (!ctx.streamFn) return undefined;
+	const inner = ctx.streamFn;
+	const wrapped = (model, context, options) =>
+		inner(model, context, { ...options, headers: { ...options?.headers, ...HEADERS } });
+	return Object.assign(wrapped, { preservesGenericCompatibility: true });
+}
+
 export default definePluginEntry({
 	id: "0g-pc",
 	name: "0G Private Computer",
@@ -64,6 +75,8 @@ export default definePluginEntry({
 					};
 				},
 			},
+			wrapStreamFn: withAttribution,
+			wrapSimpleCompletionStreamFn: withAttribution,
 		});
 	},
 });

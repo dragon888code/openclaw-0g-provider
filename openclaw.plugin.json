@@ -2,7 +2,7 @@
   "id": "0g-pc",
   "name": "0G Private Computer",
   "description": "0G Private Computer model provider: every chat model 0G's router serves, through one API key",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "categories": [
     "models"
   ],

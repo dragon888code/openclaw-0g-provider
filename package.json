@@ -1,6 +1,6 @@
 {
   "name": "openclaw-0g-pc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OpenClaw provider for 0G Private Computer: every chat model 0G's router serves",
   "type": "module",
   "license": "MIT",
