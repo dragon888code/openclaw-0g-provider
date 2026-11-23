@@ -1,6 +1,5 @@
 // Maps 0G's public model catalog (GET https://router-api.0g.ai/v1/models, no key needed) to
 // OpenClaw model definitions. Kept free of OpenClaw imports so it can be tested on its own.
-// Adapted from pi-0g (https://github.com/jake11-oho/pi-0g, MIT): OpenClaw and pi share the model shape.
 
 /** USD per token (as the catalog gives it) to USD per million tokens (as OpenClaw wants it). */
 function perMillion(v) {

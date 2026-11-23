@@ -43,8 +43,6 @@ shell or through `openclaw onboard --og-api-key`, never paste it into a conversa
 npm test                        # catalog mapping
 ```
 
-The catalog mapping is adapted from [pi-0g](https://github.com/jake11-oho/pi-0g) (MIT).
-
 ## License
 
 MIT
