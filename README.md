@@ -8,7 +8,7 @@ model 0G's router serves, sent as OpenAI chat completions to `https://router-api
 ```sh
 openclaw plugins install clawhub:openclaw-0g-pc
 export OG_API_KEY=sk-...        # an API key from https://pc.0g.ai
-openclaw models list --provider 0g
+openclaw models list --refresh --provider 0g   # load 0G's model list once
 ```
 
 Then pick a model such as `0g/glm-5.3-flash`. Keep the key out of chat transcripts: set it in your
